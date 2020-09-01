@@ -6,7 +6,7 @@ using UnityEngine;
 /// 伪单例模式
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class Singleton<T> where T : class, new()
+public abstract class Singleton<T> where T : class, IEManager, new()
 {
     private static T instance;
 
@@ -17,9 +17,11 @@ public class Singleton<T> where T : class, new()
             if (instance == null)
             {
                 instance = new T();
-                
+                instance.OnInit();
             }
             return instance;
         }
     }
+
+    public abstract void OnInit();
 }

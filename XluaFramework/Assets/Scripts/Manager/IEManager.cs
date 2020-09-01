@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Init
+public interface IEManager
 {
-    void Init();
+    void OnInit();
 }

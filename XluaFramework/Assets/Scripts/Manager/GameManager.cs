@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		//LuaManager.Instance.
+		LuaManager.Instance.GetType();
+		LOGC.LOGCG("绿色输出");
 	}
 
 	// Update is called once per frame
